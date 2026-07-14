@@ -81,7 +81,7 @@ function About() {
               {
                 icon: Flag,
                 label: "Promise",
-                body: "Right load. Right route. Right time. Every job, every week, every year.",
+                body: "Right load, right route, right time — every job, every week, every year.",
               },
             ].map((v) => (
               <Item
