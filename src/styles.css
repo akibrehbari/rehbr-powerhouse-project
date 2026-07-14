@@ -5,9 +5,8 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * Rehbr — industrial design system.
- * JCB-inspired: signal yellow on charcoal/black, heavy sans-serif type,
- * hard edges, high-contrast blocks.
+ * Rehbr — general supply chain design system.
+ * Corporate navy/blue, confident sans-serif type, clean edges.
  */
 
 @theme inline {
@@ -42,39 +41,39 @@
   --color-signal: var(--signal);
   --color-signal-deep: var(--signal-deep);
 
-  --font-display: "Archivo Black", "Anton", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
 :root {
-  --radius: 0.125rem;
+  --radius: 0.375rem;
 
-  /* Industrial palette */
-  --signal: oklch(0.83 0.18 88);          /* JCB yellow #FCB426-ish */
-  --signal-deep: oklch(0.72 0.17 78);      /* deeper amber */
-  --ink: oklch(0.13 0.01 60);              /* near-black charcoal */
-  --steel: oklch(0.22 0.005 60);           /* charcoal panel */
+  /* Corporate palette */
+  --signal: oklch(0.72 0.11 238);          /* clean corporate blue */
+  --signal-deep: oklch(0.5 0.16 250);       /* deep blue for text/borders */
+  --ink: oklch(0.18 0.03 255);              /* near-black navy */
+  --steel: oklch(0.27 0.03 255);            /* navy panel */
 
-  --background: oklch(0.98 0.005 80);      /* warm off-white */
+  --background: oklch(0.985 0 0);          /* neutral off-white */
   --foreground: var(--ink);
   --card: oklch(1 0 0);
   --card-foreground: var(--ink);
   --popover: oklch(1 0 0);
   --popover-foreground: var(--ink);
-  --primary: var(--signal);
-  --primary-foreground: var(--ink);
+  --primary: var(--signal-deep);
+  --primary-foreground: oklch(0.99 0 0);
   --secondary: var(--ink);
   --secondary-foreground: var(--signal);
-  --muted: oklch(0.94 0.005 80);
-  --muted-foreground: oklch(0.42 0.01 60);
+  --muted: oklch(0.95 0 0);
+  --muted-foreground: oklch(0.42 0 0);
   --accent: var(--signal);
   --accent-foreground: var(--ink);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.88 0.008 60);
-  --input: oklch(0.9 0.008 60);
-  --ring: var(--signal);
+  --border: oklch(0.88 0 0);
+  --input: oklch(0.9 0 0);
+  --ring: var(--signal-deep);
   --sidebar: var(--ink);
   --sidebar-foreground: oklch(0.98 0 0);
   --sidebar-primary: var(--signal);
@@ -97,7 +96,7 @@
   --secondary: var(--steel);
   --secondary-foreground: oklch(0.98 0 0);
   --muted: var(--steel);
-  --muted-foreground: oklch(0.72 0.01 60);
+  --muted-foreground: oklch(0.72 0.01 255);
   --accent: var(--signal);
   --accent-foreground: var(--ink);
   --border: oklch(1 0 0 / 12%);
@@ -124,9 +123,8 @@
 
   h1, h2, h3, h4, .display {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
-    line-height: 0.95;
-    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1.05;
   }
 
   ::selection {
@@ -136,10 +134,10 @@
 }
 
 @utility diag-stripes {
-  background-image: repeating-linear-gradient(
-    135deg,
-    var(--ink) 0 14px,
-    var(--signal) 14px 28px
+  background-image: linear-gradient(
+    90deg,
+    var(--signal-deep) 0%,
+    var(--signal) 100%
   );
 }
 

@@ -1,22 +1,33 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/site/PageShell";
 import { Reveal } from "@/components/site/Reveal";
-import { Cpu, Zap, Truck, Cog, Wrench, Route as RouteIcon, ArrowUpRight } from "lucide-react";
+import {
+  Cpu,
+  Zap,
+  Hammer,
+  HardHat,
+  Package,
+  Truck,
+  Cog,
+  Wrench,
+  Route as RouteIcon,
+  ArrowUpRight,
+} from "lucide-react";
 import { absoluteUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Electronics, Electrical & Vehicle Supply Chain | Rehbr" },
+      { title: "Services — General Supply Chain, Sourcing & Logistics | Rehbr" },
       {
         name: "description",
         content:
-          "Rehbr services: electronics & devices, electrical equipment, vehicles, spare parts, vehicle maintenance and vehicle supply chain.",
+          "Rehbr services: electronics, engineering equipment, tools, construction materials, general goods, vehicles, spare parts, maintenance and distribution.",
       },
       { property: "og:title", content: "Services — Rehbr" },
       {
         property: "og:description",
-        content: "Six service lines, one accountable operation.",
+        content: "Nine service lines, one accountable supply chain operation.",
       },
       { property: "og:url", content: absoluteUrl("/services") },
     ],
@@ -34,32 +45,50 @@ const services = [
   },
   {
     icon: Zap,
-    title: "Electrical Equipment",
-    body: "Industrial-grade electrical inventory — transformers, panels, cabling and switchgear — supplied to sites on schedule with full chain of custody.",
+    title: "Electrical & Engineering Equipment",
+    body: "Industrial-grade electrical and engineering equipment — panels, cabling, switchgear and machinery — supplied to sites on schedule with full chain of custody.",
     bullets: ["Bulk supply", "Project logistics", "Site-ready delivery"],
   },
   {
+    icon: Hammer,
+    title: "Tools & Industrial Hardware",
+    body: "Hand tools, power tools and industrial hardware sourced and stocked for workshops, contractors and job sites, with reliable restocking cycles.",
+    bullets: ["Bulk & retail sourcing", "Stocked inventory", "Fast restocking"],
+  },
+  {
+    icon: HardHat,
+    title: "Civil Engineering & Construction Materials",
+    body: "Construction materials and civil engineering supplies moved from source to site — coordinated around project timelines, not the other way round.",
+    bullets: ["Project sourcing", "Site delivery", "Timeline coordination"],
+  },
+  {
+    icon: Package,
+    title: "General Goods & Consumer Products",
+    body: "General merchandise and consumer products sourced, warehoused and distributed at scale, for retailers and distributors who need it done reliably.",
+    bullets: ["Wholesale sourcing", "Warehousing", "Distribution"],
+  },
+  {
     icon: Truck,
-    title: "Vehicles",
+    title: "Vehicles & Fleet",
     body: "Commercial and utility vehicles sourced, inspected and delivered. Whether it's a single unit or a full fleet, we handle the paperwork and the wheels.",
     bullets: ["Fleet procurement", "Pre-delivery inspection", "Documentation"],
   },
   {
     icon: Cog,
-    title: "Spare Parts",
+    title: "Spare Parts & Components",
     body: "OEM and aftermarket parts in stock and moving. Low downtime, fast dispatch and a supply chain built around your maintenance schedule.",
     bullets: ["OEM & aftermarket", "24-hour dispatch", "Warranty support"],
   },
   {
     icon: Wrench,
-    title: "Vehicle Maintenance",
-    body: "In-house garages in Gilgit staffed with certified technicians. Scheduled servicing, breakdown response and heavy-duty repairs for commercial fleets.",
-    bullets: ["Scheduled servicing", "Breakdown response", "Heavy-duty repair"],
+    title: "Maintenance & Technical Support",
+    body: "In-house workshops staffed with certified technicians. Scheduled servicing, breakdown response and repairs for vehicles and equipment alike.",
+    bullets: ["Scheduled servicing", "Breakdown response", "Technical support"],
   },
   {
     icon: RouteIcon,
-    title: "Vehicle Supply Chain",
-    body: "End-to-end logistics for automotive operations — dispatch planning, live tracking, delivery and transparent reporting.",
+    title: "Logistics & Distribution",
+    body: "End-to-end logistics across every category we move — dispatch planning, live tracking, delivery and transparent reporting.",
     bullets: ["Dispatch planning", "Live tracking", "Transparent reporting"],
   },
 ];
@@ -69,8 +98,8 @@ function Services() {
     <PageShell>
       <PageHeader
         eyebrow="Capabilities"
-        title="Six service lines, one operation."
-        intro="Everything Rehbr does connects back to a single principle: keep the load moving, keep the customer informed."
+        title="Nine service lines, one operation."
+        intro="From electronics to construction materials, tools to vehicles — everything Rehbr does connects back to a single principle: keep the load moving, keep the customer informed."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">

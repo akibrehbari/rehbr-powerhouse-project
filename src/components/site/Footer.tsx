@@ -15,8 +15,9 @@ export function Footer() {
               REHBR
             </Link>
             <p className="mt-4 max-w-md text-sm text-white/70">
-              Supply chain management built for the long haul. Electronics,
-              electrical, and automotive — moved with precision.
+              General supply chain management built for the long haul.
+              Electronics, engineering, tools, construction materials, general
+              goods and vehicles — moved with precision.
             </p>
           </div>
 

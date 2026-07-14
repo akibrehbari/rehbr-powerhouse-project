@@ -84,30 +84,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rehbr — Industrial Supply Chain Management" },
+      { title: "Rehbr — General Supply Chain Management" },
       {
         name: "description",
         content:
-          "Rehbr moves electronics, electrical equipment, vehicles and spare parts with precision. Supply chain, maintenance and logistics across Pakistan.",
+          "Rehbr is a general supply chain company moving electronics, engineering equipment, tools, construction materials, vehicles and general goods across Pakistan.",
       },
       { name: "author", content: "Rehbr" },
-      { name: "theme-color", content: "#111111" },
+      { name: "theme-color", content: "#16223b" },
       { property: "og:site_name", content: "Rehbr" },
-      { property: "og:title", content: "Rehbr — Industrial Supply Chain Management" },
+      { property: "og:title", content: "Rehbr — General Supply Chain Management" },
       {
         property: "og:description",
         content:
-          "Electronics, electrical, vehicles, spare parts, maintenance and vehicle supply chain — engineered for the long haul.",
+          "Electronics, engineering, tools, construction materials, vehicles and general goods — one accountable supply chain.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Rehbr" },
       { property: "og:image", content: absoluteUrl("/og-image.jpg") },
       { property: "og:locale", content: "en_PK" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Rehbr — Industrial Supply Chain" },
+      { name: "twitter:title", content: "Rehbr — General Supply Chain Management" },
       {
         name: "twitter:description",
-        content: "Supply chain, engineered. Electronics, electrical & automotive.",
+        content: "One supply chain for electronics, engineering, tools, construction and general goods.",
       },
       { name: "twitter:image", content: absoluteUrl("/og-image.jpg") },
       { name: "robots", content: "index, follow" },
@@ -123,7 +122,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap",
       },
     ],
     scripts: [
@@ -136,7 +135,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           name: "Rehbr",
           url: SITE_URL,
           description:
-            "Supply chain management for electronics, electrical equipment and automotive — sourcing, warehousing, maintenance and logistics across Pakistan.",
+            "General supply chain management — electronics, engineering equipment, tools, construction materials, vehicles and general goods, sourced, warehoused and delivered across Pakistan.",
           email: "aqibjaveed508@gmail.com",
           telephone: "+92-346-8333522",
           address: {

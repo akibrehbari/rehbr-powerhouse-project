@@ -8,11 +8,11 @@ import { absoluteUrl } from "@/lib/seo";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Rehbr — Supply Chain Company in Rawalpindi, Pakistan" },
+      { title: "About Rehbr — General Supply Chain Company in Rawalpindi, Pakistan" },
       {
         name: "description",
         content:
-          "Rehbr is a supply chain management company operating across electronics, electrical and automotive sectors — headquartered in Rawalpindi.",
+          "Rehbr is a general supply chain management company — electronics, engineering, tools, construction materials, general goods and vehicles — headquartered in Rawalpindi.",
       },
       { property: "og:title", content: "About Rehbr" },
       {
@@ -32,7 +32,7 @@ function About() {
       <PageHeader
         eyebrow="About Rehbr"
         title="A supply chain built for the long haul."
-        intro="Headquartered in Rawalpindi with garages across Gilgit, Rehbr runs supply chain operations for the electronics, electrical and automotive sectors."
+        intro="Headquartered in Rawalpindi with workshops across Gilgit, Rehbr runs general supply chain operations — electronics, engineering, tools, construction materials, general goods and vehicles."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
@@ -49,14 +49,14 @@ function About() {
             <Reveal delay={0.1}>
               <p className="text-lg text-muted-foreground">
                 Rehbr was built by operators, not consultants. We started with a
-                single garage and a promise: keep the fleet moving, keep the
+                single workshop and a promise: keep the goods moving, keep the
                 books honest.
               </p>
               <p className="mt-4 text-lg text-muted-foreground">
-                Today, we run a coordinated supply chain across three of the
-                hardest-working sectors in Pakistan — sourcing, warehousing,
-                dispatch, maintenance and delivery — from a single accountable
-                team.
+                Today, we run a coordinated supply chain across electronics,
+                engineering, tools, construction materials, general goods and
+                vehicles — sourcing, warehousing, dispatch, maintenance and
+                delivery — from a single accountable team.
               </p>
             </Reveal>
           </div>
@@ -84,7 +84,7 @@ function About() {
               {
                 icon: Target,
                 label: "Mission",
-                body: "To deliver efficient, transparent and scalable supply chain solutions across electronics, electrical and automotive sectors.",
+                body: "To deliver efficient, transparent and scalable supply chain solutions across every sector we serve — from electronics to construction.",
               },
               {
                 icon: Flag,

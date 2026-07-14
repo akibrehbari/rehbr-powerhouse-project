@@ -4,6 +4,9 @@ import { useRef } from "react";
 import {
   Cpu,
   Zap,
+  Hammer,
+  HardHat,
+  Package,
   Truck,
   Wrench,
   Cog,
@@ -26,18 +29,18 @@ export const Route = createFileRoute("/")({
     meta: [
       {
         title:
-          "Rehbr — Supply Chain Management for Electronics, Electrical & Vehicles in Pakistan",
+          "Rehbr — General Supply Chain: Electronics, Engineering, Tools & More in Pakistan",
       },
       {
         name: "description",
         content:
-          "Rehbr delivers electronics, electrical equipment, vehicles, spare parts, maintenance and full vehicle supply chain across Pakistan.",
+          "Rehbr delivers electronics, engineering equipment, tools, construction materials, general goods and vehicles — one general supply chain across Pakistan.",
       },
       { property: "og:title", content: "Rehbr — Supply Chain, Engineered" },
       {
         property: "og:description",
         content:
-          "Industrial-grade supply chain for electronics, electrical and automotive sectors.",
+          "A general supply chain for electronics, engineering, tools, construction and everyday goods.",
       },
       { property: "og:url", content: absoluteUrl("/") },
     ],
@@ -54,12 +57,27 @@ const services = [
   },
   {
     icon: Zap,
-    title: "Electrical Equipment",
-    body: "Industrial-grade electrical inventory moved on schedule, with full chain of custody.",
+    title: "Electrical & Engineering",
+    body: "Industrial-grade electrical and engineering equipment moved on schedule, full chain of custody.",
+  },
+  {
+    icon: Hammer,
+    title: "Tools & Hardware",
+    body: "Hand tools, power tools and industrial hardware, sourced and stocked reliably.",
+  },
+  {
+    icon: HardHat,
+    title: "Civil Engineering",
+    body: "Construction materials and civil engineering supplies, delivered on project timelines.",
+  },
+  {
+    icon: Package,
+    title: "General Goods",
+    body: "Consumer and general merchandise sourced, warehoused and distributed at scale.",
   },
   {
     icon: Truck,
-    title: "Vehicles",
+    title: "Vehicles & Fleet",
     body: "Commercial and utility vehicles procured, inspected and delivered to your yard.",
   },
   {
@@ -69,12 +87,12 @@ const services = [
   },
   {
     icon: Wrench,
-    title: "Vehicle Maintenance",
-    body: "In-house garages in Gilgit servicing fleets with certified technicians.",
+    title: "Maintenance & Support",
+    body: "In-house workshops with certified technicians for vehicles and equipment alike.",
   },
   {
     icon: RouteIcon,
-    title: "Vehicle Supply Chain",
+    title: "Logistics & Distribution",
     body: "End-to-end logistics — dispatch, tracking, delivery and reporting.",
   },
 ];
@@ -151,9 +169,9 @@ function Home() {
             transition={{ delay: 2.0, duration: 0.6 }}
             className="mt-8 max-w-xl text-lg text-white/80"
           >
-            Rehbr moves electronics, electrical equipment, vehicles and spare
-            parts with the discipline of a workshop and the reach of a national
-            operator.
+            Rehbr moves electronics, engineering equipment, tools, construction
+            materials, general goods and vehicles — with the discipline of a
+            specialist and the reach of a national operator.
           </motion.p>
 
           <motion.div
@@ -188,7 +206,7 @@ function Home() {
       <section className="bg-signal text-ink">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 py-10 md:grid-cols-3 lg:px-10">
           {[
-            { k: "6", v: "Service lines" },
+            { k: "9", v: "Service lines" },
             { k: "4", v: "Locations in Pakistan" },
             { k: "24/7", v: "Dispatch operations" },
           ].map((s) => (
@@ -211,17 +229,18 @@ function Home() {
                 About Rehbr
               </p>
               <h2 className="mt-4 text-5xl lg:text-6xl">
-                Built like the fleets we move.
+                Built for the whole supply chain.
               </h2>
             </Reveal>
           </div>
           <div className="lg:col-span-7">
             <Reveal delay={0.1}>
               <p className="text-lg text-muted-foreground">
-                Rehbr is a supply chain management company operating across the
-                electronics, electrical and automotive sectors. From our head
-                office in Rawalpindi to our garages in Gilgit, we run a tight
-                operation on hard-worn ground.
+                Rehbr is a general supply chain management company — moving
+                electronics, engineering equipment, tools, construction
+                materials, general goods and vehicles for businesses across
+                Pakistan. From our head office in Rawalpindi to our workshops
+                in Gilgit, we run a tight operation on hard-worn ground.
               </p>
               <p className="mt-4 text-lg text-muted-foreground">
                 We don't chase trends. We chase throughput, reliability and
@@ -247,7 +266,7 @@ function Home() {
                 What we move
               </p>
               <h2 className="mt-4 text-5xl lg:text-7xl text-white">
-                Six lines. One operation.
+                Nine lines. One operation.
               </h2>
             </Reveal>
             <Reveal delay={0.15}>
@@ -300,8 +319,8 @@ function Home() {
               </p>
               <h2 className="mt-4 text-5xl lg:text-6xl">Where we operate.</h2>
               <p className="mt-6 text-muted-foreground">
-                Head office in Rawalpindi. Three garages in Gilgit servicing
-                fleets across the northern corridor.
+                Head office in Rawalpindi. Three workshops in Gilgit servicing
+                vehicles and equipment across the northern corridor.
               </p>
               <Link
                 to="/locations"
@@ -315,9 +334,9 @@ function Home() {
             <Stagger className="grid gap-4 sm:grid-cols-2">
               {[
                 { city: "Rawalpindi", label: "Head Office", addr: "C 14/8, Satellite Town" },
-                { city: "Gilgit", label: "Garage", addr: "I-10 Auto Market" },
-                { city: "Gilgit", label: "Garage", addr: "PIA Link Road" },
-                { city: "Gilgit", label: "Garage", addr: "Jutial Bus Stand" },
+                { city: "Gilgit", label: "Workshop", addr: "I-10 Auto Market" },
+                { city: "Gilgit", label: "Workshop", addr: "PIA Link Road" },
+                { city: "Gilgit", label: "Workshop", addr: "Jutial Bus Stand" },
               ].map((l) => (
                 <Item
                   key={l.addr}

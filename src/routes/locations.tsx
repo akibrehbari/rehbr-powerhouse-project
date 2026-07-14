@@ -8,11 +8,11 @@ import { absoluteUrl } from "@/lib/seo";
 export const Route = createFileRoute("/locations")({
   head: () => ({
     meta: [
-      { title: "Locations — Rawalpindi Head Office & Gilgit Garages | Rehbr" },
+      { title: "Locations — Rawalpindi Head Office & Gilgit Workshops | Rehbr" },
       {
         name: "description",
         content:
-          "Rehbr head office in Rawalpindi and garages across Gilgit — I-10 Auto Market, PIA Link Road and Jutial Bus Stand.",
+          "Rehbr head office in Rawalpindi and workshops across Gilgit — I-10 Auto Market, PIA Link Road and Jutial Bus Stand.",
       },
       { property: "og:title", content: "Locations — Rehbr" },
       {
@@ -50,7 +50,7 @@ function Locations() {
       <PageHeader
         eyebrow="On the ground"
         title="Where Rehbr operates."
-        intro="Head office in Rawalpindi. Three garages across Gilgit servicing fleets on the northern corridor."
+        intro="Head office in Rawalpindi. Three workshops across Gilgit servicing vehicles and equipment on the northern corridor."
       />
 
       {/* HEAD OFFICE */}
@@ -110,13 +110,13 @@ function Locations() {
             <div className="flex items-center gap-3">
               <Wrench size={24} className="text-signal" />
               <p className="text-xs font-bold uppercase tracking-[0.4em] text-signal">
-                Garages
+                Workshops
               </p>
             </div>
             <h2 className="mt-4 text-5xl text-white lg:text-7xl">Gilgit.</h2>
             <p className="mt-6 max-w-2xl text-lg text-white/70">
-              Three garages, one team. Certified technicians, stocked parts and
-              fast response times across the region.
+              Three workshops, one team. Certified technicians, stocked parts
+              and fast response times across the region.
             </p>
           </Reveal>
 
