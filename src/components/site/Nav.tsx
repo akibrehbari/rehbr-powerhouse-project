@@ -45,7 +45,7 @@ export function Nav() {
           REHBR.
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
+        <nav className="ml-8 hidden items-center gap-1 md:flex lg:ml-16" aria-label="Primary">
           {links.map((l) => {
             const active =
               l.to === "/" ? pathname === "/" : pathname.startsWith(l.to);
