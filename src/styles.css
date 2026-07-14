@@ -55,24 +55,24 @@
   --ink: oklch(0.2 0.014 155);              /* charcoal with a hint of green */
   --steel: oklch(0.29 0.016 155);           /* grey-green panel */
 
-  --background: oklch(0.98 0.004 145);     /* soft warm-grey off-white */
+  --background: oklch(0.97 0.014 100);     /* warm sage-cream, not flat white */
   --foreground: var(--ink);
-  --card: oklch(1 0 0);
+  --card: oklch(0.995 0.006 100);
   --card-foreground: var(--ink);
-  --popover: oklch(1 0 0);
+  --popover: oklch(0.995 0.006 100);
   --popover-foreground: var(--ink);
   --primary: var(--signal-deep);
   --primary-foreground: oklch(0.99 0 0);
   --secondary: var(--ink);
   --secondary-foreground: var(--signal);
-  --muted: oklch(0.95 0.005 145);
-  --muted-foreground: oklch(0.44 0.008 150);
+  --muted: oklch(0.94 0.018 100);
+  --muted-foreground: oklch(0.44 0.012 130);
   --accent: var(--signal);
   --accent-foreground: var(--ink);
   --destructive: oklch(0.55 0.22 27);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.88 0.005 145);
-  --input: oklch(0.9 0.005 145);
+  --border: oklch(0.87 0.014 100);
+  --input: oklch(0.89 0.014 100);
   --ring: var(--signal-deep);
   --sidebar: var(--ink);
   --sidebar-foreground: oklch(0.98 0 0);

@@ -35,7 +35,7 @@ function About() {
         intro="Headquartered in Rawalpindi with workshops across Gilgit, Rehbr runs general supply chain operations — electronics, engineering, tools, construction materials, general goods and vehicles."
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <Reveal>
@@ -73,7 +73,7 @@ function About() {
           className="absolute inset-0 h-full w-full object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/80 to-ink" />
-        <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
           <Stagger className="grid gap-10 md:grid-cols-3">
             {[
               {
@@ -108,7 +108,7 @@ function About() {
         <div className="diag-stripes h-3 w-full" aria-hidden />
       </section>
 
-      <section className="mx-auto max-w-5xl px-6 py-24 lg:px-10 lg:py-32">
+      <section className="mx-auto max-w-5xl px-6 py-16 lg:px-10 lg:py-20">
         <Reveal>
           <blockquote className="text-3xl leading-tight sm:text-5xl">
             <span className="font-display uppercase text-signal-deep">

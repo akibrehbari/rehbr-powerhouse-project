@@ -12,7 +12,7 @@ export function Footer() {
               to="/"
               className="font-display text-5xl tracking-tight text-signal"
             >
-              REHBR
+              REHBR<span className="text-white/50">.</span>
             </Link>
             <p className="mt-4 max-w-md text-sm text-white/70">
               General supply chain management built for the long haul.

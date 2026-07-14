@@ -102,7 +102,7 @@ function Services() {
         intro="From electronics to construction materials, tools to vehicles — everything Rehbr does connects back to a single principle: keep the load moving, keep the customer informed."
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-14 lg:px-10 lg:py-20">
         <div className="space-y-16 lg:space-y-24">
           {services.map((s, i) => (
             <Reveal key={s.title}>

@@ -43,7 +43,7 @@ function Contact() {
         intro="Tell us the load, the route and the deadline. We'll come back with a plan."
       />
 
-      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
         <div className="grid gap-16 lg:grid-cols-12">
           {/* Info */}
           <div className="lg:col-span-5">

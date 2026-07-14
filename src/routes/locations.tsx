@@ -54,7 +54,7 @@ function Locations() {
       />
 
       {/* HEAD OFFICE */}
-      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <Reveal>
@@ -105,7 +105,7 @@ function Locations() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/80 to-ink" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
           <Reveal>
             <div className="flex items-center gap-3">
               <Wrench size={24} className="text-signal" />

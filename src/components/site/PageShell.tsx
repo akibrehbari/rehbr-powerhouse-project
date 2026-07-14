@@ -8,7 +8,6 @@ export function PageShell({ children }: { children: ReactNode }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      className="pt-20"
     >
       {children}
     </motion.main>
@@ -35,7 +34,7 @@ export function PageHeader({
         }}
         aria-hidden
       />
-      <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-10">
+      <div className="relative mx-auto max-w-7xl px-6 pb-16 pt-28 sm:pb-20 sm:pt-32 lg:px-10">
         <motion.p
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}

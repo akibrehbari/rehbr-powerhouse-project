@@ -32,7 +32,7 @@ export function Nav() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className={`fixed inset-x-0 top-0 z-50 transition-colors duration-300 ${
         scrolled || open
-          ? "bg-ink/95 backdrop-blur border-b border-white/10"
+          ? "bg-ink/80 backdrop-blur-md border-b border-white/10"
           : "bg-transparent"
       }`}
     >
@@ -42,7 +42,7 @@ export function Nav() {
           className="font-display text-3xl tracking-tight text-signal"
           aria-label="Rehbr — home"
         >
-          REHBR
+          REHBR<span className="text-white/50">.</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">

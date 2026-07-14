@@ -221,7 +221,7 @@ function Home() {
       </section>
 
       {/* WHO WE ARE */}
-      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-5">
             <Reveal>
@@ -259,7 +259,7 @@ function Home() {
 
       {/* SERVICES GRID */}
       <section className="bg-ink text-white">
-        <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
           <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
             <Reveal className="max-w-2xl">
               <p className="text-xs font-bold uppercase tracking-[0.4em] text-signal">
@@ -310,7 +310,7 @@ function Home() {
       <WhyUs />
 
       {/* LOCATIONS PREVIEW */}
-      <section className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+      <section className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
         <div className="grid gap-16 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <Reveal>
@@ -357,7 +357,7 @@ function Home() {
 
       {/* CTA */}
       <section className="relative overflow-hidden bg-signal text-ink">
-        <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-24">
+        <div className="mx-auto max-w-7xl px-6 py-14 lg:px-10 lg:py-16">
           <div className="grid gap-10 lg:grid-cols-12 lg:items-end">
             <div className="lg:col-span-8">
               <h2 className="text-5xl lg:text-7xl">
@@ -431,7 +431,7 @@ function WhyUs() {
         <div className="absolute inset-0 bg-gradient-to-b from-ink via-steel/80 to-ink" />
       </motion.div>
 
-      <div className="mx-auto max-w-7xl px-6 py-24 lg:px-10 lg:py-32">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
         <Reveal className="max-w-3xl">
           <p className="text-xs font-bold uppercase tracking-[0.4em] text-signal">
             Why Rehbr
