@@ -139,22 +139,22 @@ function Home() {
             Rawalpindi · Gilgit · Pakistan
           </motion.p>
 
-          <div className="mt-6 overflow-hidden">
+          <div className="mt-6 overflow-hidden pb-2">
             <motion.h1
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ delay: 1.5, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="font-display text-6xl leading-[0.9] text-white sm:text-8xl lg:text-[10rem]"
+              className="font-display text-6xl leading-[1.05] text-white sm:text-8xl lg:text-[10rem]"
             >
               Supply Chain,
             </motion.h1>
           </div>
-          <div className="overflow-hidden">
+          <div className="overflow-hidden pb-2">
             <motion.h2
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
               transition={{ delay: 1.7, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="font-display text-6xl leading-[0.9] text-signal sm:text-8xl lg:text-[10rem]"
+              className="font-display text-6xl leading-[1.05] text-signal sm:text-8xl lg:text-[10rem]"
             >
               Engineered.
             </motion.h2>
