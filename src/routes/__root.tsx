@@ -1,7 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   Outlet,
-  Link,
   createRootRouteWithContext,
   useRouter,
   HeadContent,
@@ -11,24 +10,31 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { Nav } from "../components/site/Nav";
+import { Footer } from "../components/site/Footer";
+import { Preloader } from "../components/site/Preloader";
 
 function NotFoundComponent() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+    <div className="flex min-h-screen flex-col items-center justify-center bg-ink px-4 text-white">
+      <div className="hero-grid absolute inset-0 opacity-20" aria-hidden />
+      <div className="relative text-center">
+        <p className="font-display text-[10rem] leading-none text-signal sm:text-[16rem]">
+          404
         </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
-          >
-            Go home
-          </Link>
-        </div>
+        <div className="diag-stripes mx-auto h-2 w-40" aria-hidden />
+        <h2 className="mt-6 font-display text-3xl uppercase tracking-tight">
+          Off the supply route
+        </h2>
+        <p className="mx-auto mt-3 max-w-md text-sm text-white/70">
+          This page isn't on the manifest. Let's get you back to the yard.
+        </p>
+        <a
+          href="/"
+          className="mt-8 inline-flex items-center gap-2 bg-signal px-6 py-3 text-sm font-bold uppercase tracking-widest text-ink hover:bg-white"
+        >
+          Return home →
+        </a>
       </div>
     </div>
   );
@@ -42,13 +48,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   }, [error]);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
+    <div className="flex min-h-screen items-center justify-center bg-ink px-4 text-white">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+        <h1 className="font-display text-3xl uppercase text-signal">
+          System halted
         </h1>
-        <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+        <p className="mt-3 text-sm text-white/70">
+          Something jammed on our end. Reset and try again.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
@@ -56,15 +62,15 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="bg-signal px-5 py-2.5 text-sm font-bold uppercase tracking-wider text-ink hover:bg-white"
           >
             Try again
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="border border-white/30 px-5 py-2.5 text-sm font-bold uppercase tracking-wider hover:bg-white/10"
           >
-            Go home
+            Home
           </a>
         </div>
       </div>
@@ -77,21 +83,60 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Rehbr — Industrial Supply Chain Management" },
+      {
+        name: "description",
+        content:
+          "Rehbr moves electronics, electrical equipment, vehicles and spare parts with precision. Supply chain, maintenance and logistics across Pakistan.",
+      },
+      { name: "author", content: "Rehbr" },
+      { name: "theme-color", content: "#111111" },
+      { property: "og:site_name", content: "Rehbr" },
+      { property: "og:title", content: "Rehbr — Industrial Supply Chain Management" },
+      {
+        property: "og:description",
+        content:
+          "Electronics, electrical, vehicles, spare parts, maintenance and vehicle supply chain — engineered for the long haul.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Rehbr — Industrial Supply Chain" },
+      {
+        name: "twitter:description",
+        content: "Supply chain, engineered. Electronics, electrical & automotive.",
+      },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap",
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Rehbr",
+          description:
+            "Supply chain management for electronics, electrical equipment and automotive.",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "C 14/8, Satellite Town",
+            addressLocality: "Rawalpindi",
+            addressCountry: "PK",
+          },
+        }),
+      },
     ],
   }),
   shellComponent: RootShell,
@@ -119,8 +164,10 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {/* Required: nested routes render here. Removing <Outlet /> breaks all child routes. */}
+      <Preloader />
+      <Nav />
       <Outlet />
+      <Footer />
     </QueryClientProvider>
   );
 }
