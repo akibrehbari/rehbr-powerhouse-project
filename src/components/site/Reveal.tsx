@@ -14,16 +14,13 @@ export function Reveal({
   children,
   delay = 0,
   className,
-  as: As = "div",
 }: {
   children: ReactNode;
   delay?: number;
   className?: string;
-  as?: React.ElementType;
 }) {
-  const MotionAs = motion(As);
   return (
-    <MotionAs
+    <motion.div
       variants={variants}
       initial="hidden"
       whileInView="show"
@@ -32,7 +29,7 @@ export function Reveal({
       className={className}
     >
       {children}
-    </MotionAs>
+    </motion.div>
   );
 }
 
@@ -61,4 +58,16 @@ export function Stagger({
   );
 }
 
-export const item: Variants = variants;
+export function Item({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
+  return (
+    <motion.div variants={variants} className={className}>
+      {children}
+    </motion.div>
+  );
+}
