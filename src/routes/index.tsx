@@ -20,8 +20,6 @@ import {
 
 import { PageShell } from "@/components/site/PageShell";
 import { Reveal, Stagger, Item } from "@/components/site/Reveal";
-import hero from "@/assets/hero.jpg";
-import fleet from "@/assets/fleet.jpg";
 import { absoluteUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
@@ -115,17 +113,16 @@ function Home() {
       >
         <motion.div
           style={{ y }}
-          className="absolute inset-0 -z-10"
+          className="absolute inset-0 -z-10 bg-gradient-to-b from-steel via-ink to-ink"
           aria-hidden
         >
-          <img
-            src={hero}
-            alt=""
-            width={1920}
-            height={1200}
-            className="h-full w-full object-cover opacity-60"
+          <div
+            className="absolute inset-0 opacity-40"
+            style={{
+              background:
+                "radial-gradient(ellipse at 30% 20%, var(--signal) 0%, transparent 55%)",
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/70 to-ink/40" />
         </motion.div>
         <div className="hero-grid absolute inset-0 -z-10 opacity-30" aria-hidden />
 
@@ -420,15 +417,8 @@ function WhyUs() {
       className="relative isolate overflow-hidden bg-steel text-white"
     >
       <motion.div style={{ y }} className="absolute inset-0 -z-10" aria-hidden>
-        <img
-          src={fleet}
-          alt=""
-          width={1600}
-          height={1000}
-          loading="lazy"
-          className="h-full w-full object-cover opacity-25"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink via-steel/80 to-ink" />
+        <div className="absolute inset-0 bg-gradient-to-b from-ink via-steel to-ink" />
+        <div className="hero-grid absolute inset-0 opacity-20" />
       </motion.div>
 
       <div className="mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">

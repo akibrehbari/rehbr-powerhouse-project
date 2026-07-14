@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/site/PageShell";
 import { Reveal, Stagger, Item } from "@/components/site/Reveal";
 import { MapPin, Building2, Wrench } from "lucide-react";
-import garage from "@/assets/garage.jpg";
 import { absoluteUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/locations")({
@@ -95,15 +94,8 @@ function Locations() {
 
       {/* GARAGES */}
       <section className="relative overflow-hidden bg-ink text-white">
-        <img
-          src={garage}
-          alt=""
-          width={1600}
-          height={1000}
-          loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/80 to-ink" />
+        <div className="absolute inset-0 bg-gradient-to-b from-steel via-ink to-ink" />
+        <div className="hero-grid absolute inset-0 opacity-20" aria-hidden />
 
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
           <Reveal>

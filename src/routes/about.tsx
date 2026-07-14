@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/site/PageShell";
 import { Reveal, Stagger, Item } from "@/components/site/Reveal";
-import warehouse from "@/assets/warehouse.jpg";
 import { Target, Compass, Flag } from "lucide-react";
 import { absoluteUrl } from "@/lib/seo";
 
@@ -64,15 +63,8 @@ function About() {
       </section>
 
       <section className="relative overflow-hidden bg-ink text-white">
-        <img
-          src={warehouse}
-          alt=""
-          width={1600}
-          height={1000}
-          loading="lazy"
-          className="absolute inset-0 h-full w-full object-cover opacity-25"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-ink via-ink/80 to-ink" />
+        <div className="absolute inset-0 bg-gradient-to-b from-steel via-ink to-ink" />
+        <div className="hero-grid absolute inset-0 opacity-20" aria-hidden />
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-10 lg:py-20">
           <Stagger className="grid gap-10 md:grid-cols-3">
             {[
