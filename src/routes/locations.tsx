@@ -3,11 +3,12 @@ import { PageShell, PageHeader } from "@/components/site/PageShell";
 import { Reveal, Stagger, Item } from "@/components/site/Reveal";
 import { MapPin, Building2, Wrench } from "lucide-react";
 import garage from "@/assets/garage.jpg";
+import { absoluteUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/locations")({
   head: () => ({
     meta: [
-      { title: "Locations — Rehbr" },
+      { title: "Locations — Rawalpindi Head Office & Gilgit Garages | Rehbr" },
       {
         name: "description",
         content:
@@ -18,9 +19,9 @@ export const Route = createFileRoute("/locations")({
         property: "og:description",
         content: "Where Rehbr operates across Pakistan.",
       },
-      { property: "og:url", content: "/locations" },
+      { property: "og:url", content: absoluteUrl("/locations") },
     ],
-    links: [{ rel: "canonical", href: "/locations" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/locations") }],
   }),
   component: Locations,
 });

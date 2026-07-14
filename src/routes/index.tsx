@@ -19,11 +19,15 @@ import { PageShell } from "@/components/site/PageShell";
 import { Reveal, Stagger, Item } from "@/components/site/Reveal";
 import hero from "@/assets/hero.jpg";
 import fleet from "@/assets/fleet.jpg";
+import { absoluteUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rehbr — Supply Chain, Engineered" },
+      {
+        title:
+          "Rehbr — Supply Chain Management for Electronics, Electrical & Vehicles in Pakistan",
+      },
       {
         name: "description",
         content:
@@ -35,9 +39,9 @@ export const Route = createFileRoute("/")({
         content:
           "Industrial-grade supply chain for electronics, electrical and automotive sectors.",
       },
-      { property: "og:url", content: "/" },
+      { property: "og:url", content: absoluteUrl("/") },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/") }],
   }),
   component: Home,
 });

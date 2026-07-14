@@ -13,6 +13,7 @@ import { reportLovableError } from "../lib/lovable-error-reporting";
 import { Nav } from "../components/site/Nav";
 import { Footer } from "../components/site/Footer";
 import { Preloader } from "../components/site/Preloader";
+import { SITE_URL, absoluteUrl } from "../lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -99,12 +100,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Electronics, electrical, vehicles, spare parts, maintenance and vehicle supply chain — engineered for the long haul.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Rehbr" },
+      { property: "og:image", content: absoluteUrl("/og-image.jpg") },
+      { property: "og:locale", content: "en_PK" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Rehbr — Industrial Supply Chain" },
       {
         name: "twitter:description",
         content: "Supply chain, engineered. Electronics, electrical & automotive.",
       },
+      { name: "twitter:image", content: absoluteUrl("/og-image.jpg") },
+      { name: "robots", content: "index, follow" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -125,16 +131,22 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": "LocalBusiness",
+          "@id": `${SITE_URL}/#organization`,
           name: "Rehbr",
+          url: SITE_URL,
           description:
-            "Supply chain management for electronics, electrical equipment and automotive.",
+            "Supply chain management for electronics, electrical equipment and automotive — sourcing, warehousing, maintenance and logistics across Pakistan.",
+          email: "aqibjaveed508@gmail.com",
+          telephone: "+92-346-8333522",
           address: {
             "@type": "PostalAddress",
             streetAddress: "C 14/8, Satellite Town",
             addressLocality: "Rawalpindi",
             addressCountry: "PK",
           },
+          areaServed: "PK",
+          sameAs: [],
         }),
       },
     ],

@@ -3,11 +3,12 @@ import { PageShell, PageHeader } from "@/components/site/PageShell";
 import { Reveal, Stagger, Item } from "@/components/site/Reveal";
 import warehouse from "@/assets/warehouse.jpg";
 import { Target, Compass, Flag } from "lucide-react";
+import { absoluteUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Rehbr" },
+      { title: "About Rehbr — Supply Chain Company in Rawalpindi, Pakistan" },
       {
         name: "description",
         content:
@@ -18,9 +19,9 @@ export const Route = createFileRoute("/about")({
         property: "og:description",
         content: "Our story, vision and mission — built on consistency and long-term partnerships.",
       },
-      { property: "og:url", content: "/about" },
+      { property: "og:url", content: absoluteUrl("/about") },
     ],
-    links: [{ rel: "canonical", href: "/about" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/about") }],
   }),
   component: About,
 });

@@ -2,11 +2,12 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/site/PageShell";
 import { Reveal } from "@/components/site/Reveal";
 import { Cpu, Zap, Truck, Cog, Wrench, Route as RouteIcon, ArrowUpRight } from "lucide-react";
+import { absoluteUrl } from "@/lib/seo";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Services — Rehbr" },
+      { title: "Services — Electronics, Electrical & Vehicle Supply Chain | Rehbr" },
       {
         name: "description",
         content:
@@ -17,9 +18,9 @@ export const Route = createFileRoute("/services")({
         property: "og:description",
         content: "Six service lines, one accountable operation.",
       },
-      { property: "og:url", content: "/services" },
+      { property: "og:url", content: absoluteUrl("/services") },
     ],
-    links: [{ rel: "canonical", href: "/services" }],
+    links: [{ rel: "canonical", href: absoluteUrl("/services") }],
   }),
   component: Services,
 });

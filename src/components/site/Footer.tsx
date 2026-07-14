@@ -43,14 +43,14 @@ export function Footer() {
               </li>
               <li className="flex gap-2">
                 <Mail size={16} className="mt-0.5 shrink-0 text-signal" />
-                <a href="mailto:info@rehbr.com" className="hover:text-signal">
-                  info@rehbr.com
+                <a href="mailto:aqibjaveed508@gmail.com" className="hover:text-signal">
+                  aqibjaveed508@gmail.com
                 </a>
               </li>
               <li className="flex gap-2">
                 <Phone size={16} className="mt-0.5 shrink-0 text-signal" />
-                <a href="tel:+92000000000" className="hover:text-signal">
-                  +92 000 000 0000
+                <a href="tel:+923468333522" className="hover:text-signal">
+                  +92 346 8333522
                 </a>
               </li>
             </ul>
