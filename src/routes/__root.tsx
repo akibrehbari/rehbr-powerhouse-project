@@ -91,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Rehbr is a general supply chain company moving electronics, engineering equipment, tools, construction materials, vehicles and general goods across Pakistan.",
       },
       { name: "author", content: "Rehbr" },
-      { name: "theme-color", content: "#16223b" },
+      { name: "theme-color", content: "#1c2721" },
       { property: "og:site_name", content: "Rehbr" },
       { property: "og:title", content: "Rehbr — General Supply Chain Management" },
       {
