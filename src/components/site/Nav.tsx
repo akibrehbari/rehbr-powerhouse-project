@@ -42,7 +42,7 @@ export function Nav() {
           className="font-display text-3xl tracking-tight text-signal"
           aria-label="Rehbr — home"
         >
-          REHBR<span className="text-white/50">.</span>
+          REHBR.
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
