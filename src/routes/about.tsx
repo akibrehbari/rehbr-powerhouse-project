@@ -47,15 +47,27 @@ function About() {
           <div className="lg:col-span-7">
             <Reveal delay={0.1}>
               <p className="text-lg text-muted-foreground">
-                Rehbr was built by operators, not consultants. We started with a
-                single workshop and a promise: keep the goods moving, keep the
-                books honest.
+                Rehbr's approach to supply chain management was shaped on the
+                ground, not in a boardroom — and that shows in how deliberately
+                simple our operating model still is. We began as a single
+                workshop and a straightforward promise: keep the goods moving,
+                and keep the books honest.
               </p>
               <p className="mt-4 text-lg text-muted-foreground">
-                Today, we run a coordinated supply chain across electronics,
-                engineering, tools, construction materials, general goods and
-                vehicles — sourcing, warehousing, dispatch, maintenance and
-                delivery — from a single accountable team.
+                That promise hasn't changed as the company has grown — it's
+                simply been applied to more service lines, more routes and more
+                clients. What started as a modest general-supply operation has
+                since expanded into one coordinated chain spanning electronics,
+                engineering equipment, tools, construction materials, general
+                goods and vehicles, all managed under the same accountable team
+                and the same documentation standard.
+              </p>
+              <p className="mt-4 text-lg text-muted-foreground">
+                Headquartered in Rawalpindi, with a workshop network across
+                Gilgit's northern corridor, we plan procurement centrally while
+                keeping servicing, storage and dispatch close to the terrain
+                our clients actually operate in — chasing throughput and
+                reliability, not trends.
               </p>
             </Reveal>
           </div>
@@ -71,17 +83,17 @@ function About() {
               {
                 icon: Compass,
                 label: "Vision",
-                body: "To be a trusted and reliable name in supply chain management — known for consistency, quality and long-term partnerships.",
+                body: "To be a trusted and reliable name in supply chain management across Pakistan — known for consistency, quality and long-term partnerships rather than one-off jobs.",
               },
               {
                 icon: Target,
                 label: "Mission",
-                body: "To deliver efficient, transparent and scalable supply chain solutions across every sector we serve — from electronics to construction.",
+                body: "To deliver efficient, transparent and scalable supply chain solutions across every sector we serve, from consumer electronics to heavy construction materials.",
               },
               {
                 icon: Flag,
                 label: "Promise",
-                body: "Right load, right route, right time — every job, every week, every year.",
+                body: "Right load, right route, right time — every job, every week, every year, regardless of terrain, season or scale.",
               },
             ].map((v) => (
               <Item

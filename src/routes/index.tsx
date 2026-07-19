@@ -51,48 +51,57 @@ const services = [
   {
     icon: Cpu,
     title: "Electronics & Devices",
-    body: "Sourcing, warehousing and last-mile delivery of consumer and industrial electronics.",
+    body: "Sourced, warehoused under climate-aware conditions and delivered last-mile, with documentation tracking each unit from procurement to delivery.",
   },
   {
     icon: Zap,
     title: "Electrical & Engineering",
-    body: "Industrial-grade electrical and engineering equipment moved on schedule, full chain of custody.",
+    body: "Industrial-grade equipment moved under full chain of custody, scheduled around project timelines rather than our own convenience.",
   },
   {
     icon: Hammer,
     title: "Tools & Hardware",
-    body: "Hand tools, power tools and industrial hardware, sourced and stocked reliably.",
+    body: "Hand tools, power tools and industrial hardware sourced and kept reliably in stock, so teams are never left waiting on one missing item.",
   },
   {
     icon: HardHat,
     title: "Civil Engineering",
-    body: "Construction materials and civil engineering supplies, delivered on project timelines.",
+    body: "Construction materials delivered against project timelines, coordinated with site teams so material availability never slips a schedule.",
   },
   {
     icon: Package,
     title: "General Goods",
-    body: "Consumer and general merchandise sourced, warehoused and distributed at scale.",
+    body: "Consumer and general merchandise sourced, warehoused and distributed at scale — one point of contact instead of a list of vendors.",
   },
   {
     icon: Truck,
     title: "Vehicles & Fleet",
-    body: "Commercial and utility vehicles procured, inspected and delivered to your yard.",
+    body: "Commercial and utility vehicles procured, inspected and delivered directly to your yard, documentation handled and ready to work.",
   },
   {
     icon: Cog,
     title: "Spare Parts",
-    body: "OEM and aftermarket parts kept in stock. Fast dispatch, low downtime.",
+    body: "OEM and aftermarket parts kept in stock for fast dispatch, reducing downtime that comes from sourcing a single part elsewhere.",
   },
   {
     icon: Wrench,
     title: "Maintenance & Support",
-    body: "In-house workshops with certified technicians for vehicles and equipment alike.",
+    body: "In-house workshops service vehicles and equipment alike, so a breakdown in the field doesn't become a lengthy outsourced repair.",
   },
   {
     icon: RouteIcon,
     title: "Logistics & Distribution",
-    body: "End-to-end logistics — dispatch, tracking, delivery and reporting.",
+    body: "End-to-end logistics — dispatch, live tracking, delivery and reporting — ties every service line into one visible operation.",
   },
+];
+
+const sectors = [
+  "Construction & Contracting",
+  "Engineering & Industrial",
+  "Banking & Corporate Fit-Outs",
+  "Retail & General Trade",
+  "Development Programs",
+  "Fleet & Vehicle Buyers",
 ];
 
 function Home() {
@@ -252,6 +261,22 @@ function Home() {
             </Reveal>
           </div>
         </div>
+
+        <Reveal delay={0.15} className="mt-16">
+          <p className="text-xs font-bold uppercase tracking-[0.4em] text-signal-deep">
+            Sectors we support
+          </p>
+          <div className="mt-5 flex flex-wrap gap-3">
+            {sectors.map((s) => (
+              <span
+                key={s}
+                className="border border-border px-4 py-2 text-sm font-semibold text-foreground/80"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+        </Reveal>
       </section>
 
       {/* SERVICES GRID */}
@@ -362,7 +387,9 @@ function Home() {
               </h2>
               <p className="mt-6 max-w-xl text-lg">
                 Tell us the load, the route and the deadline. We'll build the
-                supply chain around it.
+                supply chain around it — electronics, engineering, tools,
+                construction materials, general goods or vehicles — and report
+                back at every stage.
               </p>
             </div>
             <div className="lg:col-span-4 lg:text-right">
@@ -397,17 +424,32 @@ function WhyUs() {
     {
       icon: ShieldCheck,
       title: "Dependable",
-      body: "Fixed processes. No surprises on the delivery note.",
+      body: "Every shipment follows the same accountable chain of custody, from sourcing to signature.",
     },
     {
       icon: Gauge,
       title: "Efficient",
-      body: "Right-sized fleets and lean routing. Every trip earns its diesel.",
+      body: "We size the operation to the load, not the other way round, keeping routing efficient.",
+    },
+    {
+      icon: RouteIcon,
+      title: "Responsive",
+      body: "Coordination and tracking continue outside standard hours, wherever the load is headed.",
+    },
+    {
+      icon: Cog,
+      title: "Simple",
+      body: "Clients coordinate electronics, materials, tools and vehicles through a single accountable team.",
+    },
+    {
+      icon: Wrench,
+      title: "Supported",
+      body: "In-house servicing means issues after delivery are resolved quickly, not outsourced.",
     },
     {
       icon: Handshake,
       title: "Partners",
-      body: "Long-term contracts backed by transparent reporting.",
+      body: "Long-term contracts backed by transparent reporting — partnerships that outlast the equipment we handle.",
     },
   ];
 

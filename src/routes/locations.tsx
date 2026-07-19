@@ -29,17 +29,17 @@ const garages = [
   {
     name: "I-10 Auto Market",
     city: "Gilgit",
-    detail: "Central auto-market garage for daily fleet servicing and parts.",
+    detail: "Vehicle servicing, inspection and fleet preparation, positioned inside Gilgit's established auto market for faster parts access.",
   },
   {
     name: "PIA Link Road",
     city: "Gilgit",
-    detail: "Roadside garage covering breakdown response along the PIA corridor.",
+    detail: "A general goods and hardware staging point supporting distribution across the wider Gilgit corridor.",
   },
   {
     name: "Jutial Bus Stand",
     city: "Gilgit",
-    detail: "Bus-stand garage servicing commercial transport and heavy-duty vehicles.",
+    detail: "A dispatch and transit node supporting onward delivery to surrounding districts and project sites.",
   },
 ];
 
@@ -65,8 +65,9 @@ function Locations() {
               </div>
               <h2 className="mt-4 text-5xl lg:text-6xl">Rawalpindi.</h2>
               <p className="mt-6 text-lg text-muted-foreground">
-                Our command centre. Operations, dispatch, procurement and
-                accounts, all under one roof.
+                Client relationships, procurement planning and dispatch
+                coordination are managed from here, giving every workshop a
+                single point of instruction.
               </p>
               <address className="mt-8 not-italic">
                 <p className="flex items-start gap-2 text-lg font-semibold">
