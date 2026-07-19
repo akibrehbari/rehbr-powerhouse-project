@@ -136,7 +136,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           url: SITE_URL,
           description:
             "General supply chain management — electronics, engineering equipment, tools, construction materials, vehicles and general goods, sourced, warehoused and delivered across Pakistan.",
-          email: "aqibjaveed508@gmail.com",
+          email: "rehbr.supply@gmail.com",
           telephone: "+92-346-8333522",
           address: {
             "@type": "PostalAddress",
@@ -145,7 +145,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
             addressCountry: "PK",
           },
           areaServed: "PK",
-          sameAs: [],
+          sameAs: ["https://www.instagram.com/rehbr_"],
         }),
       },
     ],

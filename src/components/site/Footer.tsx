@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
@@ -44,14 +44,36 @@ export function Footer() {
               </li>
               <li className="flex gap-2">
                 <Mail size={16} className="mt-0.5 shrink-0 text-signal" />
-                <a href="mailto:aqibjaveed508@gmail.com" className="hover:text-signal">
-                  aqibjaveed508@gmail.com
+                <a href="mailto:rehbr.supply@gmail.com" className="hover:text-signal">
+                  rehbr.supply@gmail.com
                 </a>
               </li>
               <li className="flex gap-2">
                 <Phone size={16} className="mt-0.5 shrink-0 text-signal" />
                 <a href="tel:+923468333522" className="hover:text-signal">
                   +92 346 8333522
+                </a>
+              </li>
+              <li className="flex gap-2">
+                <MessageCircle size={16} className="mt-0.5 shrink-0 text-signal" />
+                <a
+                  href="https://wa.me/923245784535"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-signal"
+                >
+                  WhatsApp: +92 324 5784535
+                </a>
+              </li>
+              <li className="flex gap-2">
+                <Instagram size={16} className="mt-0.5 shrink-0 text-signal" />
+                <a
+                  href="https://www.instagram.com/rehbr_"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-signal"
+                >
+                  @rehbr_
                 </a>
               </li>
             </ul>

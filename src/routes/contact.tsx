@@ -1,7 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageShell, PageHeader } from "@/components/site/PageShell";
 import { Reveal } from "@/components/site/Reveal";
-import { Mail, Phone, MapPin, Send, Loader2 } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Loader2,
+  MessageCircle,
+  Instagram,
+} from "lucide-react";
 import { useState } from "react";
 import { absoluteUrl } from "@/lib/seo";
 
@@ -76,10 +84,10 @@ function Contact() {
                       Email
                     </p>
                     <a
-                      href="mailto:aqibjaveed508@gmail.com"
+                      href="mailto:rehbr.supply@gmail.com"
                       className="mt-1 block font-semibold hover:text-signal-deep"
                     >
-                      aqibjaveed508@gmail.com
+                      rehbr.supply@gmail.com
                     </a>
                   </div>
                 </li>
@@ -96,6 +104,42 @@ function Contact() {
                       className="mt-1 block font-semibold hover:text-signal-deep"
                     >
                       +92 346 8333522
+                    </a>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <div className="grid h-12 w-12 shrink-0 place-items-center bg-signal text-ink">
+                    <MessageCircle size={20} />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                      WhatsApp
+                    </p>
+                    <a
+                      href="https://wa.me/923245784535"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 block font-semibold hover:text-signal-deep"
+                    >
+                      +92 324 5784535
+                    </a>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <div className="grid h-12 w-12 shrink-0 place-items-center bg-signal text-ink">
+                    <Instagram size={20} />
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">
+                      Instagram
+                    </p>
+                    <a
+                      href="https://www.instagram.com/rehbr_"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-1 block font-semibold hover:text-signal-deep"
+                    >
+                      @rehbr_
                     </a>
                   </div>
                 </li>
